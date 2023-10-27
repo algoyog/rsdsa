@@ -1,6 +1,7 @@
 mod ds;
+use ds::linkedlist;
 
 fn main() {
     println!("Hello, world!");
-    ds::linkedlist::print();
+    linkedlist::print();
 }
