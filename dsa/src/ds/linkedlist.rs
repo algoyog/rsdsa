@@ -1,13 +1,21 @@
+use std::fmt::{Display, Formatter};
+use std::num::NonZeroI8;
 
-
-struct Node<T>{
-    val: T,
-    next: Option<Box<Node<T>>>,
-    prev: Option<Box<Node<T>>>
+#[derive(Debug)]
+pub struct Node<T>{
+   pub val: T,
+   pub next: Option<Box<Node<T>>>,
+   pub prev: Option<Box<Node<T>>>
 }
 
+pub fn init_linkedlist<T>(inputval: T) -> Node<T> {
+    let val = inputval;
+    let n1 = Node{ val: val, next: None, prev: None };
+    println!("Initializing linked list :");
+    return n1;
+}
 
 pub fn print(){
-    let n1 = Node{ val: ("Hello"), next: None, prev: None };
-    println!("Printing Linked List : {}", n1.val);
+
+    println!("Printing Linked List");
 }
